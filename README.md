@@ -27,6 +27,6 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
 * Pending
     - add (Node method not currently available.)
     - Element Classification Enrichments (サンプルコード無し)
-    - update (サンプルコード無し、設定値の変更 ?)
+    - update (サンプルコード無し, 実行すると null が返されるが params の値に更新されない？)
     - delete (ode method not currently available.)
 
