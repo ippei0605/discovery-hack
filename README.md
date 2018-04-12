@@ -39,3 +39,7 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
 * Pending
     - List collection fields (Node information not currently available.)
     - update (Node method not currently available)
+
+## Documents
+* Done
+    - add (.html, .pdf, .docx, を追加, .txt はエラーなのはOK、agile.json はエラー Why？ ja は not supported??)
