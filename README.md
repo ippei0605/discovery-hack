@@ -30,3 +30,12 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - update (サンプルコード無し, 実行すると null が返されるが params の値に更新されない？)
     - delete (ode method not currently available.)
 
+## Collections
+* Done
+    - create (params collection_name は誤植、name が正解っぽい。。。)
+    - list
+    - list detail
+    - delete
+* Pending
+    - List collection fields (Node information not currently available.)
+    - update (Node method not currently available)

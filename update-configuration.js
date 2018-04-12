@@ -153,5 +153,9 @@ const params = {
 };
 
 discovery.updateConfiguration(params, (error, data) => {
-    console.log(JSON.stringify(data, null, 2));
+    if (error) {
+        console.log('error:', error);
+    } else {
+        console.log(JSON.stringify(data, undefined, 2));
+    }
 });
