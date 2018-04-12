@@ -1,7 +1,9 @@
 'use strict';
 
 // モジュールを読込む。
-const discovery = require('./discovery');
+const
+    context = require('./context'),
+    discovery = require('./discovery');
 
 // https://www.ibm.com/watson/developercloud/discovery/api/v1/?curl#create_environment
 discovery.createEnvironment({
