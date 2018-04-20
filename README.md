@@ -43,5 +43,17 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
 ## Documents
 * Done
     - add (.html, .pdf, .docx, を追加, .txt はエラーなのはOK、agile.json はエラー Why？ ja は not supported??)
+    - delete (document_id 指定で消す、但し、id を list する方法が無い)
 * Pending
     - update (Node method not currently available.)
+    - list (じゃなくて実体はget a doc, しかも Node method not currently available.)
+
+## Queries
+* Done
+    - Query your collection
+* Pending
+    - Query ingestion notices (メソッド queryNotices はあるっぽいが、Example request not currently available.)
+    - Multiple collection querying (メソッド無いっぽいのに Example request not currently available. RESTだと対象の collection_id を渡しているので、query の複数発行で吸収可能 )
+    - Notices across multiple collections (メソッド無いっぽいのに、Example request not currently available. 前述 queryNotices の複数発行で九州可能か？)
+    - Knowledge Graph Entity Queries (メソッド queryEntities はあるっぽいが、Example request not currently available.)
+    - Knowledge Graph Relationship Queries (メソッド queryRelations はあるっぽいが、Example request not currently available.)

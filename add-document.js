@@ -7,7 +7,7 @@ const
     discovery = require('./discovery');
 
 // https://www.ibm.com/watson/developercloud/discovery/api/v1/?node#add-doc
-fs.readFile('./data/メッセージ.txt', (error, file) => {
+fs.readFile('./data/test.json', (error, file) => {
     if (error) {
         console.log('error:', error);
     } else {
