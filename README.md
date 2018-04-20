@@ -58,6 +58,9 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - Knowledge Graph Entity Queries (メソッド queryEntities はあるっぽいが、Example request not currently available.)
     - Knowledge Graph Relationship Queries (メソッド queryRelations はあるっぽいが、Example request not currently available.)
 
+## Ranking
+    - 後継 Relevancy Training ってどれ？
+
 ## 感想
 * 文書IDの一覧を取得できないので、管理UI的な物を作る場合は DB 的なものが必要。
 * 使い倒そうとすると、フィールドやらエンリッチやら情報を付加、クエリーを組み立てる必要がありそう。Automatic にならない。
