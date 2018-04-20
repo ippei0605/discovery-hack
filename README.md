@@ -57,3 +57,8 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - Notices across multiple collections (メソッド無いっぽいのに、Example request not currently available. 前述 queryNotices の複数発行で九州可能か？)
     - Knowledge Graph Entity Queries (メソッド queryEntities はあるっぽいが、Example request not currently available.)
     - Knowledge Graph Relationship Queries (メソッド queryRelations はあるっぽいが、Example request not currently available.)
+
+## 感想
+* 文書IDの一覧を取得できないので、管理UI的な物を作る場合は DB 的なものが必要。
+* 使い倒そうとすると、フィールドやらエンリッチやら情報を付加、クエリーを組み立てる必要がありそう。Automatic にならない。
+* REST (Curl) の API に比べ Java, Node.js, Python は未対応が多い。が、Node.js の watson-developer-cloud で取込むだろうから、request や axios などで自前のアクセッサを開発するのは非効率。
