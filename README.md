@@ -4,11 +4,22 @@
 
 ### サービスを作成する
 
-```
-npm run service
-```
+* Discovery サービスインスタンス
 
-サービスと Watson Discovery News (English) が作成される。
+    ```
+    npm run service
+    ```
+
+    - サービスと Watson Discovery News (English) が作成される。
+
+* Object Storage
+
+    ```
+    bx service create cloud-object-storage Premium cos-ippei
+    ```
+
+    - これだと、IBM Cloud Console 上 `cos-ippei` という名前にならない。UUID？ サポートに問合せ中
+    - とりあえず Console から買うことにする。
 
 ## Environments
 * Done

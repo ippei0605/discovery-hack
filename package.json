@@ -9,6 +9,7 @@
   "scripts": {
     "login": "bx login -a https://api.au-syd.bluemix.net -c 48984e66e3b9b429a0cfe14d0637f075 -o sieg_dev -s dev",
     "service": "bx service create discovery lite discovery-ippei",
+    "service_cos": "bx service create cloud-object-storage lite cos2-ippei",
     "vcap_services": "bx app env sieg | node node_modules/cfenv-one-liner -p VCAP_SERVICES"
   },
   "dependencies": {
