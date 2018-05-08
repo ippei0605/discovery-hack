@@ -54,6 +54,7 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
 ## Documents
 * Done
     - add (.html, .pdf, .docx, を追加, .txt はエラーなのはOK、agile.json はエラー Why？ ja は not supported??)
+        - file_content_type = 'application/json' を設定すると追加できた。(以前はAPIリファレンスに記述されてなかった。)
     - delete (document_id 指定で消す、但し、id を list する方法が無い)
 * Pending
     - update (Node method not currently available.)

@@ -13,6 +13,6 @@
     "vcap_services": "bx app env sieg | node node_modules/cfenv-one-liner -p VCAP_SERVICES"
   },
   "dependencies": {
-    "watson-developer-cloud": "^3.3.0"
+    "watson-developer-cloud": "^3.4.1"
   }
 }

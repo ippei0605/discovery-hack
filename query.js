@@ -9,7 +9,7 @@ const
 discovery.query({
     environment_id: context.id,
     collection_id: context.collection_id,
-    query: '猫の妙術を読みたい'
+    query: 'アジャイル開発宣言'
 }, (error, data) => {
     if (error) {
         console.log('error:', error);
