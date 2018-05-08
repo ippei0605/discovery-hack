@@ -4,7 +4,7 @@
   "description": "Discovery Hack",
   "private": true,
   "engines": {
-    "node": "8.9.3"
+    "node": "8.9.4"
   },
   "scripts": {
     "login": "bx login -a https://api.au-syd.bluemix.net -c 48984e66e3b9b429a0cfe14d0637f075 -o sieg_dev -s dev",
