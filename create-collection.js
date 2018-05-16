@@ -9,8 +9,8 @@ const
 // params collection_name は誤植、name が正解っぽい。。。
 discovery.createCollection({
     environment_id: context.id,
-    name: 'コレクション',
-    description: 'テスト用コレクション',
+    name: 'Box',
+    description: 'Boxテスト用コレクション',
     configuration_id: context.configuration_id,
     language: 'ja'
 }, (error, data) => {

@@ -7,7 +7,7 @@
 * Discovery サービスインスタンス
 
     ```
-    npm run service
+    $ npm run service
     ```
 
     - サービスと Watson Discovery News (English) が作成される。
@@ -15,7 +15,7 @@
 * Object Storage
 
     ```
-    bx service create cloud-object-storage Premium cos-ippei
+    $ bx service create cloud-object-storage Premium cos-ippei
     ```
 
     - これだと、IBM Cloud Console 上 `cos-ippei` という名前にならない。UUID？ サポートに問合せ中
@@ -70,8 +70,17 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - Knowledge Graph Entity Queries (メソッド queryEntities はあるっぽいが、Example request not currently available.)
     - Knowledge Graph Relationship Queries (メソッド queryRelations はあるっぽいが、Example request not currently available.)
 
-## Ranking
-    - 後継 Relevancy Training ってどれ？
+## Training data
+* Done
+    - list (Tool で自然言語に対してRelevant 適切10, 不適切0 を設定)
+
+        > 最低49クエリーに対して設定するなんて大変すぎる。
+
+![Tool](docs/tool-rank.png)
+
+
+
+
 
 ## 感想
 * 文書IDの一覧を取得できないので、管理UI的な物を作る場合は DB 的なものが必要。
@@ -83,15 +92,49 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
 ## Cloud Object Storage を試す。
 * bx コマンドのインスタンスとエイリアスの問題は問合せ中だが。。。
 * とりあえず、mac にマウントしてみるか。
+    - https://qiita.com/wokamoto/items/e62034d8bb1c81dcdd78
     - https://qiita.com/satorubz/items/eba9bf9909b158a5d73c
+* COS の Console からサービス資格情報を作成する。
+    - 作成時にオプションが必要。{"HMAC":true}
+        - https://qiita.com/osonoi/items/81f52f57ded3e8aac82d
 
 ```
-brew install goofys
+{
+  "apikey": "FlMYX1Iv_WBWuaMEYy0c6vAF2-xWhwzQqJSauRCEZxZp",
+  "cos_hmac_keys": {
+    "access_key_id": "b9f922aa86d94535b8763dfe0338e0c0",
+    "secret_access_key": "b8d2cc844ab56fab42085084b6766ad348f31e6764024b59"
+  },
+  "endpoints": "https://cos-service.bluemix.net/endpoints",
+  "iam_apikey_description": "Auto generated apikey during resource-key operation for Instance - crn:v1:bluemix:public:cloud-object-storage:global:a/48984e66e3b9b429a0cfe14d0637f075:acd65abd-9f08-4dfd-af91-7eec66dd28c3::",
+  "iam_apikey_name": "auto-generated-apikey-b9f922aa-86d9-4535-b876-3dfe0338e0c0",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Writer",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/48984e66e3b9b429a0cfe14d0637f075::serviceid:ServiceId-bd76bec5-9ae5-4f0d-83a3-f98e78965b29",
+  "resource_instance_id": "crn:v1:bluemix:public:cloud-object-storage:global:a/48984e66e3b9b429a0cfe14d0637f075:acd65abd-9f08-4dfd-af91-7eec66dd28c3::"
+}
+```
+
+```
+$ brew install awscli
+$ aws configure
+AWS Access Key ID [None]: b9f922aa86d94535b8763dfe0338e0c0
+AWS Secret Access Key [None]: b8d2cc844ab56fab42085084b6766ad348f31e6764024b59
+Default region name [None]: us-geo
+Default output format [None]: json
+```
+
+```
+$ aws s3 ls --endpoint=https://s3-api.us-geo.objectstorage.softlayer.net
+2018-05-10 11:34:55 docs-ippei
+```
+
+```
+$ brew install goofys
 ```
 
 * IBM Cloud Console で、bucket「docs-ippei」(us-geo, Standard)を作成して、適用なファイルを保管する。
 
 
-# goofys --endpoint=https://s3-api.sjc-us-geo.objectstorage.service.networklayer.com my-bucket /ext/icos
+goofys --endpoint=https://s3-api.us-geo.objectstorage.softlayer.net docs-ippei /docs-ippei
 
 goofys --endpoint=https://s3-api.us-geo.objectstorage.service.networklayer.com my-bucket /ext/icos

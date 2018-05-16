@@ -5,15 +5,14 @@ const
     context = require('./context'),
     discovery = require('./discovery');
 
-const query = 'metadata.sourceUrl::"file:///Users/ippei/IdeaProjects/discovery-hack/crawl-target/050926-16.json"';
-//const query = 'アジャイル開発宣言';
-//const query = '{extracted_metadata.filename: "agile.json"}';
+const nl = '鬼瓦少佐の記事を読みたい';
 
 // https://www.ibm.com/watson/developercloud/discovery/api/v1/?node#query-collection
 discovery.query({
     environment_id: context.id,
     collection_id: context.collection_id,
-    query: query
+    natural_language_query: nl,
+    count: 5
 }, (error, data) => {
     if (error) {
         console.log('error:', error);
