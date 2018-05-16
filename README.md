@@ -75,6 +75,7 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - list (Tool で自然言語に対してRelevant 適切10, 不適切0 を設定)
 
         > 最低49クエリーに対して設定するなんて大変すぎる。
+        > Tool は relevance は 10 or 0 だが、number なので降順のように並べることも可能だろう。
 
 ![Tool](docs/tool-rank.png)
 
