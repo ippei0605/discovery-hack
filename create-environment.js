@@ -5,7 +5,7 @@ const
     context = require('./context'),
     discovery = require('./discovery');
 
-// https://www.ibm.com/watson/developercloud/discovery/api/v1/?curl#create_environment
+// https://www.ibm.com/watson/developercloud/discovery/api/v1/node.html?node#create-environment
 discovery.createEnvironment({
     name: 'my_environment',
     description: 'My environment',
