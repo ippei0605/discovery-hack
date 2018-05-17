@@ -2,18 +2,14 @@
 
 // モジュールを読込む。
 const
-    fs = require('fs'),
     context = require('./context'),
     discovery = require('./discovery');
 
-// https://www.ibm.com/watson/developercloud/discovery/api/v1/?node#add-doc
-
-const file = fs.createReadStream('./data/neko.pdf');
-discovery.addDocument({
+// https://www.ibm.com/watson/developercloud/discovery/api/v1/node.html?node#get-document-status
+discovery.getDocumentStatus({
     environment_id: context.id,
     collection_id: context.collection_id,
-    file: file,
-    file_content_type: 'application/pdf'
+    document_id: 'fcbe5190-ac3c-4a4d-abde-7511bcfe6c91'
 }, (error, data) => {
     if (error) {
         console.log('error:', error);

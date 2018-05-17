@@ -56,6 +56,7 @@ Node.js ではあまり操作できなそう。createEnvironment で自動生成
     - add (.html, .pdf, .docx, を追加, .txt はエラーなのはOK、agile.json はエラー Why？ ja は not supported??)
         - file_content_type = 'application/json' を設定すると追加できた。(以前はAPIリファレンスに記述されてなかった。)
     - delete (document_id 指定で消す、但し、id を list する方法が無い)
+    - get (getDocumentStatus、文書IDで引くが全情報取得できない。全情報を取得したい場合は query = DQL で `id:"8bcbe934-dcf3-4331-9ffc-5ddc050c882e"` などとする。。。)
 * Pending
     - update (Node method not currently available.)
     - list (じゃなくて実体はget a doc, しかも Node method not currently available.)

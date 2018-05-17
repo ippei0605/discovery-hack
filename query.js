@@ -5,7 +5,9 @@ const
     context = require('./context'),
     discovery = require('./discovery');
 
-const query = 'metadata.sourceUrl::"file:///Users/ippei/IdeaProjects/discovery-hack/crawl-target/050926-16.json"';
+//const query = 'metadata.sourceUrl::"file:///Users/ippei/IdeaProjects/discovery-hack/crawl-target/050926-16.json"';
+const query = 'id:"8bcbe934-dcf3-4331-9ffc-5ddc050c882e"';
+
 //const query = 'アジャイル開発宣言';
 //const query = '{extracted_metadata.filename: "agile.json"}';
 

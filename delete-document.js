@@ -9,7 +9,7 @@ const
 discovery.deleteDocument({
     environment_id: context.id,
     collection_id: context.collection_id,
-    document_id: '29f2371dad30835b344a6ca05b473eae'
+    document_id: '7d807632-072f-40bb-bed4-edf749cc52eb'
 }, (error, data) => {
     if (error) {
         console.log('error:', error);
