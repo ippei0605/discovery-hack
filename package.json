@@ -10,9 +10,23 @@
     "login": "bx login -a https://api.au-syd.bluemix.net -c 48984e66e3b9b429a0cfe14d0637f075 -o sieg_dev -s dev",
     "service": "bx service create discovery lite discovery-ippei",
     "service_cos": "bx service create cloud-object-storage lite cos-ippei",
-    "vcap_services": "bx app env sieg | node node_modules/cfenv-one-liner -p VCAP_SERVICES"
+    "bind_cos": "bx service bind discovery-hack-ippei cos-ippei",
+    "restage": "bx app restage discovery-hack-ippei",
+    "vcap_services": "bx app env discovery-hack-ippei | node node_modules/cfenv-one-liner -p VCAP_SERVICES",
+    "push": "bx app push discovery-hack-ippei",
+    "start": "node app",
+    "page": "opener https://discovery-hack-ippei.au-syd.mybluemix.net/"
   },
   "dependencies": {
-    "watson-developer-cloud": "^3.4.1"
+    "cfenv": "^1.1.0",
+    "express": "^4.16.3",
+    "ibm-cos-sdk": "^1.2.1",
+    "morgan": "^1.9.0",
+    "serve-favicon": "^2.5.0",
+    "watson-developer-cloud": "^3.4.2"
+  },
+  "devDependencies": {
+    "cfenv-one-liner": "0.0.2",
+    "opener": "^1.4.3"
   }
 }

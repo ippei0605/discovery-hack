@@ -5,7 +5,7 @@ const
     context = require('./context'),
     discovery = require('./discovery');
 
-// https://www.ibm.com/watson/developercloud/discovery/api/v1/?node#create-collection
+// https://www.ibm.com/watson/developercloud/discovery/api/v1/node.html?node#create-collection
 // params collection_name は誤植、name が正解っぽい。。。
 discovery.createCollection({
     environment_id: context.id,
